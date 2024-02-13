@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets//imgs/logo1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="/styles/main.css">
+
+
+    <title>Bytheg</title>
+</head>
+
+<body>
+    <div class="wrapp">
+        <header>
+            <nav class="site-nav grid">
+                <div class="main-logo">
+                    <img src="./assets/imgs/logo1.png" alt="">
+                </div>
+                <ul class="nav-list">
+                    <li class="nav_item1"><a href="#">Inicio</a></li>
+                    <li class="nav_item2"><a href="#">Nube</a></li>
+                    <li class="nav_item3"><a href="#">Productos</a></li>
+                    <li class="nav_item4"><a href="#">Soluciones</a></li>
+                    <li class="nav_item5"><a href="#">Servicios</a></li>
+                    <li class="nav_item6"><a href="#">Acerca de nosotros</a></li>
+                    <li class="nav_item7"><a href="#">Perspectivas</a></li>
+                    <li class="nav_item8"><a href="#">Sopore</a></li>
+                    <div class="nav-social">
+                        <a href="#" class="nav-social-item"></a>
+                        <div class="social-facebook icon-social" onclick="fb_clicked()"></div>
+                        <a href="#" class="nav-social-item"></a>
+                        <div class="social-twitter icon-social" onclick="tw_clicked()"></div>
+                        <a href="#" class="nav-social-item"></a>
+                        <div class="social-instagram icon-social" onclick="in_clicked()"></div>
+                    </div>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </header>
+        <!-- ----------------------  Slider ------------------------------------------>
+        <div class="slider-wrapper">
+            <div class="slide fade">
+                <div class="slide-txt">
+                    <p>La tecnologia es tu aliada en tu negocio </p>
+                </div>
+                <img src="./assets/imgs/code_screen1.jpg" alt="custom_slide" class="slide_img"></div>
+            <div class="slide fade">
+                <div class="slide-txt">
+                    <p>Te llevamos al siguiente nivel en tus proyectos </p>
+                </div>
+                <img src="./assets/imgs/code_screen2.jpg" alt="custom_slide" class="slide_img"></div>
+            <div class="slide fade">
+                <div class="slide-txt">
+                    <p>Te llevamos al siguiente nivel en tus proyectos </p>
+                </div>
+                <img src="./assets/imgs/engineering.jpg" alt="custom_slide" class="slide_img"></div>
+            <div class="slide fade">
+                <div class="slide-txt">
+                    <p>Te llevamos al siguiente nivel en tus proyectos </p>
+                </div>
+                <img src="./assets/imgs/networking3.jpg" alt="custom_slide" class="slide_img"></div>
+                <div class="slide fade">
+                    <div class="slide-txt">
+                        <p>Te llevamos al siguiente nivel en tus proyectos </p>
+                    </div>
+                    <img src="./assets/imgs/team1.jpg" alt="custom_slide" class="slide_img"></div>
+
+            <a class="prev" onclick="plusSlide(-1)">&#10094</a>
+            <a class="next" onclick="plusSlide(1)">&#10095</a> 
+
+            <div class="dotsbox">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+        
+        <div class="hook">
+            <p>Si necesitas soporte y asistencia especializada en tus proyectos contamos con mas de 20 años de experiencia en tenología de la información</p>
+        </div>
+
+    
+        <!-- ----------------------  Portfolio ------------------------------------------>
+        <hr class="divider">
+        <div class="portfolio">
+            <div class="portfolio-item portfolio-item1">
+                <div class="portfolio-item-header">
+                    <img src="./assets/imgs/mobile-app.jpg" alt="default_portImg" class="portfolio-item-img">
+                    <div class="portfolio-item-text">Desarrollo de aplicaciones para dispositivos moviles</div>
+                </div>
+            </div>
+            <div class="portfolio-item portfolio-item2">
+                <div class="portfolio-item-header">
+                    <img src="./assets/imgs/rfid1.jfif" alt="default_portImg" class="portfolio-item-img">
+                    <div class="portfolio-item-text">Soporte e implementacion de tecnologia RFID</div>
+                </div>
+            </div>
+            <div class="portfolio-item portfolio-item3">
+                <div class="portfolio-item-header">
+                    <img src="./assets/imgs/system1.png" alt="default_portImg" class="portfolio-item-img">
+                    <div class="portfolio-item-text">Desarrollo de interfases de usuario para interactuar con PLC's
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item portfolio-item4">
+                <div class="portfolio-item-header">
+                    <img src="./assets/imgs/networking.jpg" alt="default_portImg" class="portfolio-item-img">
+                    <div class="portfolio-item-text">Soporte e Implementacion de infraestructura para comunicaciones</div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------  Skills ------------------------------------------>
+        <hr class="divider">
+        <div class="skills">
+            <div class="skill-item skill-item1">
+                <div class="skill-item-img skill-item-img1 icon-skills">
+                </div>
+                <div class="skill-item-text">
+                    <h3>Desarrollo de software Web, Movil y Desktop</h3>
+                    <p>Ayudamos en tus necesidades de tecnologia de software para llevar a tu negocio al nivel mas alto y eficientar tus procesos</p>
+                    </div>
+            </div>
+            <div class="skill-item skill-item2">
+                <div class="skill-item-img skill-item-img2 icon-skills">
+                </div>
+                <div class="skill-item-text">
+                    <h3>Expertise en Bases de datos SQL / no SQL</h3>
+                    <p>Somos expertos en el uso del manejo de bases de datos SQL y no SQL </p>
+                </div>
+            </div>
+            <div class="skill-item skill-item3">
+                <div class="skill-item-img skill-item-img3 icon-skills">
+                </div>
+                <div class="skill-item-text">
+                    <h3>IoT, Internet de las cosas</h3>
+                    <p>Te brindamos apoyo a tus proyectos para aplicar la tecnologio basada en IoT, 
+                        hemos desarrollado interfaces de usuarios para el control de dispositivos remotos  </p>
+                </div>
+            </div>
+            <div class="skill-item skill-item4">
+                <div class="skill-item-img skill-item-img4 icon-skills">
+                </div>
+                <div class="skill-item-text">
+                    <h3>Networking</h3>
+                    <p>Te apoyamos en la asesoria e instalación de la infraestructura que necesites para hacer que tu empresa sea mas eficiente</p>
+                </div>
+            </div>
+            <div class="skill-item skill-item5">
+                <div class="skill-item-img skill-item-img5 icon-skills">
+                </div>
+                <div class="skill-item-text">
+                    <h3>Interfaces con PLC's</h3>
+                    <p>Si necesitas soporte y asistencia especializada en tus proyectos contamos
+                        con mas de 20 años de experiencia en tenología de la información</p>
+                </div>
+            </div>
+            <div class="skill-item skill-item6">
+                <div class="skill-item-img skill-item-img6 icon-skills">
+                </div>
+                <div class="skill-item-text">
+                    <h3>Automatización</h3>
+                    <p>Te ayudamos a eficientar tus procesos para obtener la mayor productividad posible </p>
+                </div>
+            </div>
+            <div class="skill-item skill-item7">
+                <div class="skill-item-img skill-item-img7 icon-skills">
+                </div>
+                <div class="skill-item-text">
+                    <h3>Asesoría tecnológica</h3>
+                    <p>Te ayudamos para que logres tus objetivos tecnologicos y obtener la mejor productividad en tu empresa  </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------------------  Contact ------------------------------------------>
+        <hr class="divider">
+        <form method="POST" class="contact-form">
+            <div class="contact-title">
+                <p>Contacto</p>
+            </div>
+            <div class="contact-name">
+                <p>Nombre</p>
+                <input class="name" type="text" placeholder="name">
+            </div>
+            <div class="contact-email">
+                <p>Email</p>
+                <input class="email" type="email" placeholder="email">
+            </div>
+            <div class="contact-message">
+                <p>Mensaje</p>
+                <textarea class="message" name="" id="" cols="30" rows="10" placeholder="message" required></textarea>
+            </div>
+            
+            <div class="contact-send">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+
+    </div>
+
+<script src="./js/slider.js"></script>
+<script src="./js/main.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+
+</html>

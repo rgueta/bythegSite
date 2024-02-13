@@ -1,0 +1,701 @@
+
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+/* variables */
+:root{
+    --txt-color1:#2f2f2f;;
+    --txt-color2:#1a1a1a;
+    --border-color1:#3498db;
+    --border-color2:#0076ce;
+    --back-color1:#000;
+    --bkgrd-color1:#fff;
+    --bkgrd-color2:#f1f1f1;
+}
+
+
+
+/* reset */
+body,p,a,ul,li{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+/* base styles */
+
+body{
+    background: var(--bkgrd-color2);
+    overflow-x: hidden;
+}
+
+
+header{
+    /* box-sizing: border-box; */
+    background: var(--back-color1);
+    /* color: rgb(247, 219, 176); */
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    /* display: flex; */
+    /* min-height: 60px; */
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 9;
+}
+
+
+.divider{
+    margin-top:30px;
+    height:0; 
+    border-top: 1px solid var(--border-color2);
+}
+
+/* 
+.site-nav{
+    background-color: var(--back-color1);
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%;
+} */
+
+li{
+    list-style-type: none;
+}
+
+.icon-skills{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon-social{
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 900;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* fonts */
+
+/* mobile styles */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    width: 100%;
+}
+
+.main-logo img{
+    grid-column: 1/2;
+    height: 70px;
+    width: 75px;
+    margin-left:50% ;
+    margin-top:5px;
+}
+
+
+/* ---------------------------------  Menu  nav --------------------------------- */
+
+
+.burger{
+    grid-column: 8/8;
+    float: right;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 20px;
+    /* padding: 5px 10px; */
+    width: 65%;
+    height: 50%;
+}
+
+
+.burger div{
+    display: flex;
+    width: 30px;
+    height: 2px;
+    background-color: rgb(226,226,226);
+    margin: 8px;
+    transition: all 0.3s ease;
+   
+}
+
+.nav-list{
+    position: absolute;
+    right: 0px;
+    float: right;
+    height: 87vh;
+    top:74px;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-list li{
+    height: 30px;
+    opacity: 0;
+    list-style: none;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.nav-list li:hover{
+    cursor: pointer;
+    color: #000;
+    background : rgba(45, 45, 45, 0.9);
+}
+
+.nav-list li:hover a{
+    color: white;
+}
+
+
+.nav-list li a{
+    display: block !important;
+    color: beige;
+    margin-top: 6px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.nav-social{
+    margin-left: -40px;
+    padding-left: -80px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-social div{
+    cursor: pointer;
+}
+
+.nav-social i{
+    padding: 5px 15px;
+}
+
+.social-facebook::before{
+    content:"\f09a";
+    color: var(--border-color2);
+    font-size: 1.5em;
+}
+
+.social-twitter::before{
+    content:"\f081";
+    color: var(--border-color2);
+    font-size: 1.5em;
+}
+
+.social-instagram::before{
+    content:"\f16d";
+    color: var(--border-color2);
+    font-size: 1.5em;
+}
+
+/*      ---------------  Nav menu animation --------------------  */
+
+.nav-active{
+
+    transform: translateX(0%);
+    /* height: 200px; */
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-7px,8px);
+}
+
+.toggle .line2{
+    opacity: 0;
+
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-7px,-8px);
+}
+
+
+/*  ---------------------------------    Slider    -------------------------------------- */
+
+
+.slider-wripper{
+
+    height: 100%;
+    width: 100%;
+    background: #2c3e50;
+}
+
+
+.slide{
+    /* display: none; */
+    
+    height: 350px;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transform: scale(1.5,1.5);
+    --webkit-animation-name:zooming;
+    --webkit-animation_duration:40s;
+    animation-name:zooming ;
+    animation-duration: 40s;
+}
+
+@-webkit-keyframes zooming{
+    from {transform:scale(1, 1)}
+    to {transform:scale(1.5, 1.5)}
+    
+}
+
+@keyframes zooming{
+    from {transform:scale(1, 1)}
+    to {transform:scale(1.5, 1.5)}
+}
+
+
+.prev, .next{
+    position: absolute;
+    top:25%;
+    transform: translate(0,-50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.15s;
+    user-select: none;
+}
+
+.prev:hover, .next:hover{
+    color: #3498db;
+}
+
+.next{
+    right: 0px;
+}
+
+.dotsbox{
+    /* position: absolute; */
+    left: 50%;
+    transform: translateY(-120%);
+    bottom:-20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dot{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor:pointer;
+}
+
+.active, .dot:hover{
+    
+    border-color: var(--border-color1);
+}
+
+.fade{
+    --webkit-animation-name:fade;
+    --webkit-animation_duration:1.5s;
+    animation-name:fade ;
+    animation-duration: 1.5s;
+
+}
+
+@-webkit-keyframes fade{
+    from {opacity: 0.8}
+    to {opacity: 1}
+    
+}
+
+@keyframes fade{
+    from {opacity: 0.8}
+    to {opacity: 1}
+}
+
+.slide-txt{
+    position: absolute;
+    color: #fff;
+    letter-spacing: 2px;
+
+    line-height: 35px;
+    top: 30%;
+    left: 10%;
+
+
+    /* line-height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50, -50%);
+    animation-name: posi2; */
+
+    --webkit-animation-name: posi;
+    --webkit-animation-duration: 2.s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 1;
+}
+
+.slide-txt p{
+    border-radius: 10px;
+    background: rgba(9,9,9,0.3);
+    font-weight:bold;
+    font-size: 1.2em;
+    padding-left: 10px;
+    margin:-10% 0 0 20px;
+    width: 80%;
+}
+
+@-webkit-keyframes posi {
+    from {left: 20%}
+    to {left: 10%}
+}
+
+@keyframes posi{
+    from {left: 20%}
+    to {left: 10%}
+}
+
+/* -------------------  Hook ---------------------------------*/
+.hook{
+    
+    display: grid;
+    font-size: 1.5em;
+    font-weight: bold;
+    grid-template-columns: repeat(1,1f);
+    margin: 0 5px 0px 15px;
+    width: 100%;
+}
+
+
+/*  ---------------------------------    Portfolio    -------------------------------------- */
+
+.portfolio{
+    border-radius: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    background-color: var(--bkgrd-color2);
+}
+
+.portfolio div{
+    border-radius: 10px;
+    margin: 5px;
+    padding: 2px;
+    background: var(--bkgrd-color1);
+} 
+
+.portfolio-item-header img{
+    height: 80px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+/*  ---------------------------------    Skills    -------------------------------------- */
+
+.skills {
+    display: grid;
+    grid-gap: 5px;
+    background: var(--bkgrd-color2);
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-flow: row;
+    height: 100%;
+    width: 100%;
+}
+
+.skill-item {
+    border-radius: 10px;
+    background: var(--bkgrd-color1);
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4,1fr);
+    margin: 5px 10px 0 10px;
+    padding: 2px;
+}
+
+.skill-item-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+}
+
+.skill-item-text{
+    grid-column: 2/5;
+}
+
+.skill-item-img img{
+    height: 100%;
+    width: 100%;
+    /* float: right; */
+    /* overflow: hidden; */
+}
+
+.skill-item-img1::before{
+    content:"\f121";
+    color: var(--border-color2);
+    font-size: 3em;
+    /* float: right; */
+
+}
+
+.skill-item-img2::before{
+    content:"\f1c0";
+    color: var(--border-color2);
+    font-size: 3em;
+    /* float: right; */
+
+}
+
+.skill-item-img3::before{
+    content:"\f0c2";
+    color: var(--border-color2);
+    font-size: 3em;
+    /* float: right; */
+
+}
+
+.skill-item-img4::before{
+    content:"\f6ff";
+    color: var(--border-color2);
+    font-size: 3em;
+    float: right;
+
+}
+
+.skill-item-img5::before{
+    content:"\f233";
+    color: var(--border-color2);
+    font-size: 3em;
+    float: right;
+
+}
+
+.skill-item-img6::before{
+    content:"\f085";
+    color: var(--border-color2);
+    font-size: 3em;
+    float: right;
+}
+
+.skill-item-img7::before{
+    content:"\f2db";
+    color: var(--border-color2);
+    font-size: 3em;
+    float: right;
+
+}
+
+.skill-item-text h3{
+   margin: -3px 2px 2px 2px;
+   color:var(--txt-color1);
+}
+
+ .skill-item div{
+    margin:5px;
+    padding: 2px;
+}
+
+.skill-item-text p{
+    /* width: 100%; */
+    margin-top: 2px;
+    padding-top: 5px;
+} 
+
+/*-- ----------------------  Contact ------------------------------------------*/
+
+
+
+.contact-form{
+    margin: 30px;
+    padding: 5px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.contact-form input{
+    height: 30px;
+}
+
+
+.contact-form input,textarea{
+  border-radius: 5px;
+  padding: 3px;
+  -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+  -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+  box-shadow: inset 2px 2px 2px 0px #dddddd;
+}
+
+.contact-title{
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    text-align: center;
+    grid-column: 1/2;
+}
+
+.contact-title p{
+    font-weight: bold;
+    font-size: 1em;
+    color: var(--txt-color1);
+}
+
+
+.contact-name{
+    /* width: 100%; */
+    grid-column: repeat(1,1fr);
+}
+
+.contact-name input{
+    margin: 10px;
+    width: 90%;
+    grid-column: repeat(1,1fr);
+}
+
+.contact-email input{
+    margin: 10px;
+    width: 90%;
+    grid-column: repeat(1,1fr);
+}
+
+.contact-message textarea{
+    margin: 10px;
+    width: 90%;
+    grid-column: repeat(1,1fr);
+}
+
+.contact-name p, .contact-email p, .contact-message p{
+    color: var(--txt-color2);
+    font-size: 1.2em;
+    padding-left: 15px;
+}
+
+
+.contact-name input, .contact-email input, .contact-message textarea{
+    font-size: 1.2em;
+}
+
+.contact-send{
+    display: grid;
+    grid-template-columns: repeat(2,1f);
+    padding-top: 0;
+    width: 100%;
+}
+
+.contact-send button{
+    border-top:-20px;
+    background: var(--border-color1);
+    border:none;
+    border-radius: 5px;
+    color:#fff;
+    font-size: 1.2em;
+    height: 40px;
+    letter-spacing: 0.03em;
+    padding-left: 0;
+    width: 50%;
+    margin-left: 25%;
+}
+
+/* Mobiles styles */
+@media screen and (max-width: 576px){
+    .burger{
+        grid-column: 7/8;
+    }
+
+    .slide{
+        padding-left: 10px;
+    }
+
+    .portfolio-item-header img{
+        height: 120px;    
+    }
+
+    .contact-form{
+        margin: 5px;
+    }
+
+    .prev, .next{
+        font-size: 30px;
+    }
+}
+
+/* small tablet styles */
+@media screen and (min-width: 412px) and (min-width: 915px){
+    .burger{
+        grid-column: 7/8;
+    }
+
+    .slide{
+        padding-left: 10px;
+    }
+
+    .portfolio-item-header img{
+        height: 120px;    
+    }
+
+    .slider-wripper{
+        margin:20px;
+        height: 100%;
+        width: 100%;
+        background: #2c3e50;
+    }
+}
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px){
+    .contact-form{
+        margin: 5px;
+    }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
+    .slide{
+        height: 650px;
+
+    }
+
+    .portfolio-item-header img{
+        height: 160px;    
+    }
+}
